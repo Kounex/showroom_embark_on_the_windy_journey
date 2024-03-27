@@ -4,7 +4,7 @@ In order to start the whole exercise from the `{oai}` perspective, we will need 
 
 == MinIO
 
-The model we want to train and use later on needs to reside somewhere. `{oai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be S3 buckets, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
+The model we want to train and use later on needs to reside somewhere. `{oai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
 
 To install `MinIO`:
 
