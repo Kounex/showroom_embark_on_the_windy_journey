@@ -10,6 +10,4 @@
 ** xref:module-03.adoc#prerequisites[Install Prerequisites]
 ** xref:module-03.adoc#container[Enable Container]
 
-* xref:module-04.adoc[4. Model Serving]
-
-* xref:module-05.adoc[5. Test Inferencing with a REST API call]
+* xref:module-04.adoc[4. Configure and test Model Serving]
