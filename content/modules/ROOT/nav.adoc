@@ -2,14 +2,14 @@
 ** xref:module-01.adoc#repositories[Repositories]
 ** xref:module-01.adoc#software[Software]
 
-* xref:module-02.adoc[2. GitHub Sourced Container]
+* xref:module-02.adoc[2. Setup a RHODS workbench]
 ** xref:module-02.adoc#prerequisites[Install Prerequisites]
 ** xref:module-02.adoc#container[Enable Container]
 
-* xref:module-03.adoc[2. GitHub Sourced Container]
+* xref:module-03.adoc[3. Model Training]
 ** xref:module-03.adoc#prerequisites[Install Prerequisites]
 ** xref:module-03.adoc#container[Enable Container]
 
-* xref:module-04.adoc[2. GitHub Sourced Container]
-** xref:module-04.adoc#prerequisites[Install Prerequisites]
-** xref:module-04.adoc#container[Enable Container]
+* xref:module-04.adoc[4. Model Serving]
+
+* xref:module-05.adoc[5. Test Inferencing with a REST API call]
