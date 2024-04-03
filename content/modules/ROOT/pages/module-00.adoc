@@ -28,3 +28,9 @@ Since your provided user has admin privileges on the cluster, you are automatica
 As an admin, you can simply swap between both by clicking on the dropdown button:
 
 image::../assets/module-00/admin-dev-toggle.png[Administrator and Developer Switch]
+
+== Navigating the {ocpc}
+
+Feel free to explore and switch between the Administrator and Developer views as both have certain advantages depending on what you want to do. Generally speaking the Administrator view focuses more on splitting and showing the different resources which are available on {ocp} while the Developer view focuses on applications on {ocp}, therefore it's more straight forward to deploy, manage and observe your applications and the processes (like CI/CD) from there.
+
+TODO: continue with import YAML etc.
