@@ -1,10 +1,21 @@
 = Prerequisites
 
-In order to start the whole exercise from the `{oai}` perspective, we will need to deploy and configure some applications which will be used later on:
+In order to start the whole exercise from the `{ocpai}` perspective, we will need to deploy and configure some applications and resources which will be used later on:
+
+== Project
+
+A project is a Kubernetes namespace with additional annotations, and is the central vehicle by which access to resources for regular users is managed. A project allows a team of users to organize and manage their content in isolation from other teams, therefore making multi tenancy more straight forward.
+
+Ultimately, you will deploy applications and resources in namespaces. So lets create your namespace for this workshop!
+
+Head over to the {ocp} console to create your projet.
+
+On the top left corner 
+
 
 == MinIO
 
-The model we want to train and use later on needs to reside somewhere. `{oai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
+The model we want to train and use later on needs to reside somewhere. `{ocpai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
 
 To install `MinIO`:
 

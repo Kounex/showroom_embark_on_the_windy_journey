@@ -1,3 +1,6 @@
+* xref:module-00.adoc[0. Getting acquainted with OpenShift]
+** xref:module-00.adoc#_minio[MinIO]
+
 * xref:module-01.adoc[1. Prerequisites]
 ** xref:module-01.adoc#_minio[MinIO]
 

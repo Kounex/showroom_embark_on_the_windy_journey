@@ -7,16 +7,16 @@ nav:
 
 asciidoc:
   attributes:
-    lab_name: "Embark on the Windy Journey"
-    oai: "OpenShift AI"
-    ocpc: "OpenShift Console"
+    lab_name: Embark on the Windy Journey
+    ocp: OpenShift
+    ocpai: OpenShift AI
+    ocpc: OpenShift Console
+    ocpc-url: https://REPLACE.ME
+    ocp-login: admin
+    ocp-pw: admin
     release-version: master
     page-pagination: true
-    my_var: "foo"
     guid: my-guid
-    ssh_user: devops
-    ssh_password: devops
-    ssh_command: ssh devops@bastion.{guid}.example.opentlc.com
     page-links:
     - url: https://redhat.com
       text: Red Hat
