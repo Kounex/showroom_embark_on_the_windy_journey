@@ -1,43 +1,36 @@
 = {lab_name}
 
-The `lab_name` var, known as an asciidoc attribute, above was set in `./content/antora.yml` and can be used to set the lab_name or title of your content.
-You are both free to change its value and if you prefer to use a different var name, you can change the value of `lab_name`, for example to `title` in `./content/antora.yml` and then reference it in your content as `\{title}`.
+image::openshiftai.png[openshiftai,55%,55%]
 
-image::rhel-logo-black.jpg[rhel-logo-black,55%,55%]
+This repository serves as the foundation for the *{lab_name}* workshop. It contains all the neccessary manifests and steps to reproduce the used stack and approaches from the workshop.
+*{lab_name}* is a project that serves as a practical tutorial for detecting anomalies in wind turbines through computer vision visual inspection. This workshop provides an example using *{oai}*, exploring use cases of MLOps and DevOps methodologies, and offering the opportunity to gain hands-on experience in deploying ML models for real-world applications. Delving into the ML infrastructure sections, you will navigate through use cases pertinent to MLOps and DevOps engineers, while focusing on the practical tasks involved in ML application development for anomaly detection in wind turbines. 
 
-== Variables
+== What to expect
 
-Other vars can also be set there, such as `ssh_user` and `ssh_password`, and referenced inline in the lab content by using the `\{foo}` syntax.
-
-This is another var, or asciidoc attribute, from `./content/antora.yml` {my_var}
+In the workshop (and by following along the documentation), you will get in touch with various tools for an (opnitionated) AI/ML workflow. These tools for example include:  `PyTorch`, `Jupyter Notebooks`, `Kafka`, `Knative`, `MinIO`, `OpenShift` (with *{oai}*) and others. You will set those up and be able to understand how these components interact with each other. You will be able to set up and initiate the training of a model, make it available for inferencing and deploy the infrastructure and runtimes, all in a cloud native fashion on Kubernetes (OpenShift).
 
 == Writing your lab
 
-Whatever type of content you are writing we'll refer to your *content* as "your lab" in this document.
+This repository serves as a mono repository containing source codes of applications for this use case as well as manifests (yamls) to deploy resources on OpenShift. Usually you will split applications and infrastructure resources in separate repositories with different responsibilities. FOr the sake of this workshop and to make it easier accessible, we merged it all into one.
 
 === Lab structure
 
-Wether you are writing a lab
+|===
+| File | Description
 
-* First, we will build a monolithic application already compiled as RPM packages and put it into a container. This will allow us to deploy the application, copy it between machines, and update it separately from the operating system. This process affords us a portable and easily maintained component instead of tightly coupling the application with your operating system maintenance.
+| Prerequisites
+| The applications of this use case will use certain services we need to install on our OpenShift cluster. We will need services like Serverless, AMQ Streams (Kafka) and {oai}. This guide will explain how to install those.
 
-* In closing we will build a second container on a different operating system version that makes an application not packaged into RPMs. This will be similar to a web application deployment, positioning the correct files at the right locations. To do this, we will pull a project from GitHub and position the component files within our container image. The purpose of this is to achieve a portable application container that can deploy on several different versions of Red Hat Enterprise Linux. This also provides the benefit of decoupling your application maintenance, which would all happen by building new containers versus operating system maintenance. The container is no longer reliant on the operating system installed on the machine where the application is deployed.
+| Model Training
+| For this use case we want to train a model which will be capable of finding anomalies in wind turbine images. We will use the capabilities of {oai} to do so. This guide will explain how to use {oai} for our workshop.
 
-. Now let's examine this cluster a bit more by describing the cluster (the `$GUID` environment variable is already set for you so you can immediately describe your individual cluster):
-+
-[source,sh,role=execute]
-----
-podman ps
-----
-+
-.Sample Output
-[source,texinfo,subs="attributes"]
-----
-CONTAINER ID  IMAGE                        COMMAND           CREATED      STATUS      PORTS                 NAMES
-2dcfee9e50c4  docker.io/library/httpd:2.4  httpd-foreground  3 hours ago  Up 3 hours  0.0.0.0:8080->80/tcp  showroom-httpd
-----
+| Configure and Test Model Serving
+| We will test the model and once everything else is set up, we will deploy our actual applications which will make use of the now existing infrastructure of OpenShift services and the Data Science stack. This guide explains how to deploy them all correctly.
+|===
 
 === Lab Access
+
+-- in progress
 
 The terminal window to your right is *already* logged into the lab environment as the `{ssh_user}` user via `ssh`. 
 All steps of this lab are to be completed as the `{ssh_user}` user.
