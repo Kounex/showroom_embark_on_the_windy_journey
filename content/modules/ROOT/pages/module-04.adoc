@@ -7,7 +7,7 @@
 For all steps see Module `Setup RHODS workbench`
 
 
-== Download a pre-trained wvi model and upload it to S3
+== Download a pre-trained model and upload it to your S3 bucket
 
 In case you have to not had the time or resources to train the model by yourself, you can download a pre-trained wvi model and upload it to your S3 bucket.
 
@@ -37,7 +37,7 @@ In case you have to not had the time or resources to train the model by yourself
  ** Copy and save the inference URL
 
 
- == Test inferencing with a REST API call
+== Test inferencing with a REST API call
 
 Try out how an ML REST call could be integrated into your 'intelligent' Python application.
 
