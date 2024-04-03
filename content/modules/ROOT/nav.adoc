@@ -1,5 +1,6 @@
 * xref:module-00.adoc[0. Getting acquainted with OpenShift]
-** xref:module-00.adoc#_minio[MinIO]
+** xref:module-00.adoc#_accessing_the_openshift_console_web_ui[Accessing the OpenShift Console (Web UI)]
+** xref:module-00.adoc#_navigating_the_openshift_console[Navigating the OpenShift Console]
 
 * xref:module-01.adoc[1. Prerequisites]
 ** xref:module-01.adoc#_minio[MinIO]
