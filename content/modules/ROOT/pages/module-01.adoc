@@ -2,17 +2,6 @@
 
 In order to start the whole exercise from the `{ocpai}` perspective, we will need to deploy and configure some applications and resources which will be used later on:
 
-== Project
-
-A project is a Kubernetes namespace with additional annotations, and is the central vehicle by which access to resources for regular users is managed. A project allows a team of users to organize and manage their content in isolation from other teams, therefore making multi tenancy more straight forward.
-
-Ultimately, you will deploy applications and resources in namespaces. So lets create your namespace for this workshop!
-
-Head over to the {ocp} console to create your projet.
-
-On the top left corner 
-
-
 == MinIO
 
 The model we want to train and use later on needs to reside somewhere. `{ocpai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
@@ -219,9 +208,11 @@ spec:
 ... `Deployment`: the main resource which will reference the used MinIO image and deploy it
 ... `Service`: define how the deployment will be accessible from a network perspective - mainly port definitions
 ... `PersistentVolumeClaim`: MinIO will enable us to create and expose S3 buckets, therefore object storage - that needs storage to begin with and this resource will attach storage to MinIO which it can then use
-... 'Secret': contains the credentials for the root user of your MinIO instance
-... 'Route': two of them, references the used `Service` to expose it and make it available outside the your cluster - in this case for the API and the Console (UI) of MinIO
+... `Secret`: contains the credentials for the root user of your MinIO instance
+... `Route`: two of them, references the used `Service` to expose it and make it available outside the your cluster - in this case for the API and the Console (UI) of MinIO
 
-NOTE: You can see that none of the resources above mention a `namespace` attribute. This is because this makes it more flexible so that the used `namespace` will be derived from the currently selected one. That's why it's important to create one in hindsight and make sure it's selected.
+NOTE: You can see that none of the resources above mention a `namespace` attribute. This is because this makes it more flexible so that the used `namespace` will be derived from the currently selected one. That's why it's important to create one before and make sure it's selected.
 
 NOTE: The login credentials for your MinIO instance can be seen in the `Secret`, it's `minio` with `minio123`.
+
+=== Create a bucket
