@@ -13,11 +13,11 @@ For now, open up your browser of choice and head over to {ocpc-url}. There you w
 
 Once logged in, you will see the {ocp} dashboard:
 
-image::../assets/module-00/dashboard-01.png[OpenShift Dashboard with overall status]
+image::dashboard-01.png[OpenShift Dashboard with overall status]
 
 Here you will find some high level / general purpose information of the state of your cluster like the overall status of the operators, control plane and so on. Further down you can also see some hardware resource utilization of your cluster:
 
-image::../assets/module-00/dashboard-02.png[OpenShift Dashboard with hardware metrics]
+image::dashboard-02.png[OpenShift Dashboard with hardware metrics]
 
 Since your provided user has admin privileges on the cluster, you are automatically on the "Administrator" view which can be seen on the top left corner, right under the {ocp} logo. There you can also toggle between the "Administrator" and "Developer" view which are, as the name indicates, targeted for different audiences / use cases. The Developer perspective provides workflows specific to developer use cases, such as the ability to:
 
@@ -27,10 +27,18 @@ Since your provided user has admin privileges on the cluster, you are automatica
 
 As an admin, you can simply swap between both by clicking on the dropdown button:
 
-image::../assets/module-00/admin-dev-toggle.png[Administrator and Developer Switch]
+image::admin-dev-toggle.png[Administrator and Developer Switch]
 
 == Navigating the {ocpc}
 
 Feel free to explore and switch between the Administrator and Developer views as both have certain advantages depending on what you want to do. Generally speaking the Administrator view focuses more on splitting and showing the different resources which are available on {ocp} while the Developer view focuses on applications on {ocp}, therefore it's more straight forward to deploy, manage and observe your applications and the processes (like CI/CD) from there.
 
-TODO: continue with import YAML etc.
+Throughout the workshop you will have to create resources in {ocp}, like `Deployment`, `Secret`, `Service` etc. These will be in `YAML` format, just like the existing resources you can see in {ocp}. To create such resources, simply click on the plus symbol at the upper right hand corner:
+
+image::import-yaml-1.png[Import YAML in OpenShift]
+
+This will open up a text area box where you an simply drop the resource definitions you want to add to the {ocp} cluster:
+
+image::import-yaml-2.png[Text area box to import YAML in OpenShift]
+
+NOTE: As seen in the screenshot, you can add multiple resources at once by making use of `---` (three dashes) to separate resources. You will see this in action in some of the YAML resources being presented throughout the workshop.
