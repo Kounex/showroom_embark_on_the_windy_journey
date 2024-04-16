@@ -1,37 +1,39 @@
 = Model Serving
 
-== Prerequisites for this model
+== Prerequisites
 - Your workbench is configured and running.
 - You have a data connection
 - The git repo is cloned 
-For all steps see Module `Setup RHODS workbench`
+For all steps see Module `{ocpai} workbench`
 
 
 == Download a pre-trained model and upload it to your S3 bucket
 
-In case you have to not had the time or resources to train the model by yourself, you can download a pre-trained wvi model and upload it to your S3 bucket.
+In case you have to not had the time or resources to train the model by yourself, you can now download a pre-trained model and upload it to your S3 bucket.
 
-* Open your workbench (with your wvi data connection)
+* Open your workbench
 * Navigate to `windy-journey/ml/pytorch` and open `02_Visual_Inspection_Upload_Pretrained_Model.ipynb`
 * Run the notebook to upload the model
 
-== Configure RHODS model serving
+== Configure {ocpai} model serving
+
+Switch to the {ocpai} web console, navigate to `Data Science Project` and select your project `{user}`.
 
 * Create model server in your data science project
- ** Models and model servers \-> *`Configure server`*
- ** Server name: `+wvi-{your-name}+`
+ ** Models and model servers \-> *`Add model server`*
+ ** Server name: `+wj+`
  ** Serving runtime: `OpenVINO Model Server`
  ** Number of model server replicas to deploy: `1`
  ** Model server size: `Small`
  ** Model route: \-> `Check/Enable` _'Make deployed models available through an external route'_
  ** Token authorization \-> `Uncheck/Disable` _'Require token authentication'_
- ** \-> *`Configure`*
+ ** \-> *`Add`*
 * Deploy the trained model \-> *`Deploy Model`*
- ** Model Name: `+wvi-{your-name}+`
+ ** Model Name: `+wy+`
  ** Model framework: `onnx - 1`
  ** Model location: `Existing data connection`
- ** Name: `+wvi-{your-name}+`
- ** Folder path: `+wvi-{your-name}-best.onnx+`
+ ** Name: `+wy+`
+ ** Folder path: `+wy.onnx+`
  ** \-> *`Deploy`*
 * Wait until Status is green / loaded
  ** Copy and save the inference URL

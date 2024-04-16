@@ -3,19 +3,21 @@
 ** xref:module-00.adoc#_navigating_the_openshift_console[Navigating the OpenShift Console]
 
 * xref:module-01.adoc[1. Prerequisites]
+** xref:module-01.adoc#_openshift_ai_data_science_projects[Data Science Project]
 ** xref:module-01.adoc#_minio[MinIO]
 
-* xref:module-02.adoc[2. Setup a RHODS workbench]
-** xref:module-02.adoc#_create_new_rhods_workbench_for_ultralytics_pytorch_yolov5[Create new RHODS workbench for Ultralytics Pytorch YOLOv5]
+* xref:module-02.adoc[2. OpenShift AI workbench]
+** xref:module-02.adoc#_create_a_data_connection[Create a data connection]
+** xref:module-02.adoc#__create_a_workbench[Create a workbenchn]
 
 * xref:module-03.adoc[3. Model Training]
-** xref:module-03.adoc#_explore_and_run_the_model_training_notebook[Explore and run the model training notebook]
-
+** xref:module-03.adoc##_launch_jupyterlab[Launch JupyterLab]
+** xref:module-03.adoc#_explore_and_run_the_model_training_notebook[Model training notebook]
 
 * xref:module-04.adoc[4. Configure and test Model Serving]
-** xref:module-04.adoc#_prerequisites_for_this_model[Prerequisites for this model]
-** xref:module-04.adoc#_download_a_pre_trained_model_and_upload_it_to_your_s3_bucket[Upload a pre-trained model to your S3 bucket]
-** xref:module-04.adoc#_configure_rhods_model_serving[Configure RHODS model serving]
-** xref:module-04.adoc#_test_inferencing_with_a_rest_api_call[Test inferencing with a REST API call]
+** xref:module-04.adoc#_prerequisites[Prerequisites]
+** xref:module-04.adoc#_download_a_pre_trained_model_and_upload_it_to_your_s3_bucket[Download pre-trained model]
+** xref:module-04.adoc#_configure_openshift_ai_model_serving[Configure Model serving]
+** xref:module-04.adoc#_test_inferencing_with_a_rest_api_call[Test inferencing API]
 
 
