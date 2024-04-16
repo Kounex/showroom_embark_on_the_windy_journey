@@ -11,7 +11,6 @@ asciidoc:
     ocp: OpenShift
     ocpai: OpenShift AI
     ocpc: OpenShift Console
-    ocpc-url: https://REPLACE.ME
     ocp-login: admin
     ocp-pw: admin
     release-version: master

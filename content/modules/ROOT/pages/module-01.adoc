@@ -1,10 +1,20 @@
 = Prerequisites
 
-In order to start the whole exercise from the `{ocpai}` perspective, we will need to deploy and configure some applications and resources which will be used later on:
+In order to start the whole exercise from the {ocpai} perspective, we will need to deploy and configure some applications and resources which will be used later on:
+
+== {ocpai} Project
+
+The most important aspect of this workshop is going to be working at the {ocpai} part. There you will be able to setup everything needed for model training and serving. While we will still have other prerequisites before we can actually jump into the AI part, we want to already create a project there because it will also create a dedicated `namespace`. We will then use this created `namespace` for all resources later on!
+
+To access {ocpai}, simply click on the hamburger menu at the upper right hand corner which opens up a popup where you can simply click on {ocpai}:
+
+image::ocpai-access.png[Access OpenShift AI]
+
+PROJECT NAME: {user}
 
 == MinIO
 
-The model we want to train and use later on needs to reside somewhere. `{ocpai}` has a featue which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of `MinIO` which enables us to create such buckets in our cluster.
+The model we want to train and use later on needs to reside somewhere. {ocpai} has a feature which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of MinIO which enables us to create such buckets in our cluster.
 
 === Install MinIO:
 
@@ -216,3 +226,5 @@ NOTE: You can see that none of the resources above mention a `namespace` attribu
 NOTE: The login credentials for your MinIO instance can be seen in the `Secret`, it's `minio` with `minio123`.
 
 === Create a bucket
+
+TODO: how to access minio ui and create bucket with screenshot
