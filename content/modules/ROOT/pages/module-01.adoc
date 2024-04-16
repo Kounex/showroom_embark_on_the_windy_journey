@@ -12,6 +12,25 @@ image::ocpai-access.png[Access OpenShift AI]
 
 PROJECT NAME: {user}
 
+== {ocpai} Data Science Projects
+With data science project in `Red Hat OpenShift AI` you organize your work in projects and workbenches, create and collaborate on notebooks, train and deploy models, configure model servers, and implement pipelines.
+
+
+=== Create a {ocpai} Data Science Project:
+
+* Log in to the `{ocp}` web console: {openshift_console_url}
+* Launch `{ocpai}` via the application launcher (nine-dots) \-> *`Red Hat OpenShift AI`*
+* Create a new Data Science project \-> *`Create data science project`*.
++
+Please use your assigned user name as project name.
+
+ ** Name: `{user}`
+ ** Resource name: `windy journey`
+ ** \-> *`Create`*.
+
+Creating a data science project in Red Hat OpenShift AI, create also a project and namespace in OpenShift.
+In the OpenShift web console, please select your project `{user}`.
+
 == MinIO
 
 The model we want to train and use later on needs to reside somewhere. {ocpai} has a feature which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of MinIO which enables us to create such buckets in our cluster.

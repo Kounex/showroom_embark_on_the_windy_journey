@@ -8,8 +8,8 @@ The easiest way to interact with an {ocp} cluster, is to make use of the {ocpc},
 
 For now, open up your browser of choice and head over to {console_url}. There you will be greeted by the login page. Select "Local" and use the following credentials:
 
-* {ocp-login}
-* {ocp-pw}
+* {user}
+* {password}
 
 Once logged in, you will see the {ocp} dashboard:
 
