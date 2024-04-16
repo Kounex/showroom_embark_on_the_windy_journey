@@ -1,5 +1,11 @@
 = Model Training
 
+While tools such as JupyterLab already offer intuitive ways for data scientists to develop models on their machines, there are always inherent complexities involved with collaboration and sharing work. Moreover, using specialized hardware such as powerful GPUs can be very expensive when you have to buy and maintain your own. The Jupyter environment that is included with OpenShift AI lets you take your development environment anywhere you need it to be. Because all of the workloads are run as containers, collaboration is as easy as sharing an image with your team members, or even simply adding it to the list of default containers that they can use. As a result, GPUs and large amounts of memory are significantly more accessible, since you are no longer limited by what your laptop can support.
+
+== Launch JupyterLab
+* Open your workbench that you cerated in the previous chapter.
+* Clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
+
 == Explore and run the model training notebook
 
 * Navigate to `windy-journey/ml/pytorch` and open `01_Visual_Inspection_YOLOv5_Model_Training.ipynb`
@@ -7,9 +13,10 @@
  ** Setup and test the Ultralytics YOLOv5 toolkit
  ** Inspect training dataset (image and labels)
  ** Model training
-  *** _Model training can take ~30 minutes or more even with GPUs. You could jump to <<model-serving,Model Serving>>, use a pre-trained model and come back later._
- ** Model validation
- ** Convert model to onnx format and upload it to S3
+ ** Test the model
+ ** Convert model to onnx format
 
-NOTE: the notebook's cells contain output messages from a previous successful run. This is so you could explain the demo without actually run anything (i.e. no GPUs required, etc...). But in order to run the demo yourself, you need to run every cell successfully _once_, even if the outputs might suggest is has already run.
+NOTE: Model training can take ~60 minutes or more even with GPUs. In this lab we don't have any GPU. Therefore, we only start the model training, but interrupt it and move on with a pre-trained model.
+
+NOTE: The notebook's cells contain output messages from a previous successful run. This is so you could stufy or show the notebook without actually run anything.
 

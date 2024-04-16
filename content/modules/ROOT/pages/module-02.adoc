@@ -1,36 +1,29 @@
-= Setup a RHODS workbench 
+= {ocpai} workbench 
 
-== Create new RHODS workbench for Ultralytics Pytorch YOLOv5
+Switch to the {ocpai} web console, navigate to `Data Science Project` and select your project `{user}`. 
 
-* Log in to the OpenShift web console
-* Launch RHODS via the application launcher (nine-dots) \-> *`Red Hat OpenShift Data Science`*
-* Create a new Data Science project \-> *`Create data science project`*.
-+
-If you have your own OpenShift cluster, you can name the project 'wvi'. If not add your initials. E.g. 'wvi-stb' or team number like 'wvi-1'.
-Don't choose too long names, because project and model server names are internally concatenated, which could lead into problems.
 
- ** Name: `+wvi-{your-name}+`
- ** Resource name: `windy visual inspection `
- ** \-> *`Create`*.
+== Create a data connection 
+* Data connections \-> *`Add Data connections`*.
+* Name: `+wj+`
+* AWS_ACCESS_KEY_ID: `minio`
+* AWS_SECRET_ACCESS_KEY: `minio123`
+* AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
+* AWS_DEFAULT_REGION: `us-east2` (it seem this cannot be empty)
+* AWS_S3_BUCKET: `+wj+`
 
-* Create a data connection with your S3 configuration
- ** Data connections \-> *`Add Data connections`*.
- ** Name: `+wvi-{your-name}+`
- ** AWS_ACCESS_KEY_ID: `minio`
- ** AWS_SECRET_ACCESS_KEY: `minio123`
- ** AWS_S3_ENDPOINT: `+http://minio-service.minio.svc.cluster.local:9000+`
- ** AWS_DEFAULT_REGION: `us-east2` (it seem this cannot be empty)
- ** AWS_S3_BUCKET: `+wvi-{your-name}+`
-* Create new RHODS workbench
- ** Workbenches \-> *`Create workbench`*.
- ** Name: `+wvi-{your-name}+`
- ** Image: `Windy Journey Lab Notebook` 
- ** Deployment size: `Small`
- ** Number of GPUs: 0
- ** Cluster storage: `Create new cluster storage`
- ** Data connection: `Use existing data connection` \-> `+wvi-{your-name}+`
- ** \-> *`Create workbench`*.
-* Note, in case the workbench does not start, please check if LimitRanges block the pod. Find the created project in the OpenShift console, navigate to Administration \-> LimitRanges and delete the LimitRange that was auto created.
+== Create a workbench
+
+* Workbenches \-> *`Create workbench`*.
+* Name: `+wj+`
+* Image: `Windy Journey Lab Notebook` 
+* Deployment size: `Small`
+* Number of GPUs: 0
+* Cluster storage: `Create new cluster storage`
+* Data connection: `Use existing data connection` \-> `+wj+`
+* \-> *`Create workbench`*.
+* Wait until the stays show `running`
+
 * Open the workbench and clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
 
 

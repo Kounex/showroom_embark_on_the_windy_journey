@@ -28,7 +28,3 @@ This repository serves as a mono repository containing source codes of applicati
 | We will test the model and once everything else is set up, we will deploy our actual applications which will make use of the now existing infrastructure of OpenShift services and the AI stack. This guide explains how to deploy them all correctly.
 |===
 
-=== Lab Access
-
-The terminal window to your right is *already* logged into the lab environment as the `{ssh_user}` user via `ssh`. 
-All steps of this lab are to be completed as the `{ssh_user}` user.
