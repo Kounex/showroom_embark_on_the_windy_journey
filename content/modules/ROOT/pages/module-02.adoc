@@ -10,7 +10,7 @@ Switch to the {ocpai} web console, navigate to `Data Science Project` and select
 * AWS_SECRET_ACCESS_KEY: `minio123`
 * AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
 * AWS_DEFAULT_REGION: `us-east2` (it seem this cannot be empty)
-* AWS_S3_BUCKET: `+wj+`
+* AWS_S3_BUCKET: `+wjvi+`
 
 == Create a workbench
 
