@@ -1,30 +1,60 @@
 = {ocpai} workbench 
 
-Switch to the {ocpai} web console, navigate to `Data Science Project` and select your project `{user}`. 
+Switch to the {ocpai} web console, navigate to `Data Science Project` and select your project `{user}`. You can now see its initial state. There are five types of project components:
+
+image::ocpaicomp.png[OCPAI components]
+
+* *Workbenches* are instances of your development and experimentation environment. They typically contain IDEs, such as JupyterLab, RStudio, and Visual Studio Code.
+* A *Cluster storage* is a volume that persists the files and data you’re working on within a workbench. A workbench has access to one or more cluster storage instances.
+* *Data connections* contain configuration parameters that are required to connect to a data source, such as an S3 object bucket.
+* *Pipelines* contain the Data Science pipelines that are executed within the project.
+* *Models and model servers* allow you to quickly serve a trained model for real-time inference. You can have multiple model servers per data science project. One model server can host multiple models.
 
 
 == Create a data connection 
-* Data connections \-> *`Add Data connections`*.
+
+*Data connections* contain configuration parameters that are required to connect to a data source, i.e. Minio in this case.
+
+. Under *Components* click on *`Add Data connections`* in *Data Connections*
++
+image::dataconn.png[Add Data Conn] 
++
+. Fill out the *Add data connection* form with the following information. These data were already set earlier in xref:module-01.adoc[Prerequisites]
+
 * Name: `{global-name}`
 * AWS_ACCESS_KEY_ID: `minio`
 * AWS_SECRET_ACCESS_KEY: `minio123`
 * AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
-* AWS_DEFAULT_REGION: `us-east2` (it seem this cannot be empty)
-* AWS_S3_BUCKET: `{global-name}`
+* AWS_DEFAULT_REGION: `us-east2` (it seems this cannot be empty)
+* AWS_S3_BUCKET: `{global-name}` 
++
+image::createdata.png[Create Connection]
++
+. Once done, click on *Add Data Connection*
 
 == Create a workbench
 
-* Workbenches \-> *`Create workbench`*.
+A *workbench* is an instance of your development and experimentation environment. Within the workbench you can select a notebook image for your data science work. We will be using *Windy Journey Lab Notebook* as our notebook image. We will also use the data connections we just created.
+
+. Click on *`Create workbench`* under Components
+
+. Fill out the form with the following information:
+
 * Name: `{global-name}`
 * Image: `Windy Journey Lab Notebook` 
 * Deployment size: `Small`
 * Number of GPUs: 0
 * Cluster storage: `Create new cluster storage`
 * Data connection: `Use existing data connection` \-> `{global-name}`
-* \-> *`Create workbench`*.
-* Wait until the stays show `running`
-
-* Open the workbench and clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
++
+image::createworkbench.png[Create Workbench]
++
+. Click on *`Create workbench`*.
+. You will see that it is *starting* in the *status*. Wait until the *Status* shows `running`
++
+image::openjuypter.png[Create Workbench]
++
+. Open the workbench and clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
 
 
 
