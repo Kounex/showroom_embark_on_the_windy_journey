@@ -5,22 +5,22 @@ Switch to the {ocpai} web console, navigate to `Data Science Project` and select
 
 == Create a data connection 
 * Data connections \-> *`Add Data connections`*.
-* Name: `+wj+`
+* Name: `{global-name}`
 * AWS_ACCESS_KEY_ID: `minio`
 * AWS_SECRET_ACCESS_KEY: `minio123`
 * AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
 * AWS_DEFAULT_REGION: `us-east2` (it seem this cannot be empty)
-* AWS_S3_BUCKET: `+wjvi+`
+* AWS_S3_BUCKET: `{global-name}`
 
 == Create a workbench
 
 * Workbenches \-> *`Create workbench`*.
-* Name: `+wj+`
+* Name: `{global-name}`
 * Image: `Windy Journey Lab Notebook` 
 * Deployment size: `Small`
 * Number of GPUs: 0
 * Cluster storage: `Create new cluster storage`
-* Data connection: `Use existing data connection` \-> `+wj+`
+* Data connection: `Use existing data connection` \-> `{global-name}`
 * \-> *`Create workbench`*.
 * Wait until the stays show `running`
 

@@ -4,32 +4,21 @@ In order to start the whole exercise from the {ocpai} perspective, we will need 
 
 == {ocpai} Project
 
-The most important aspect of this workshop is going to be working at the {ocpai} part. There you will be able to setup everything needed for model training and serving. While we will still have other prerequisites before we can actually jump into the AI part, we want to already create a project there because it will also create a dedicated `namespace`. We will then use this created `namespace` for all resources later on!
+The most important aspect of this workshop is going to be working at the {ocpai} part. There you will be able to setup everything needed for model training and serving. While we will still have other prerequisites before we can actually jump into the AI part, we want to already create a project there because it will also create a dedicated `namespace`. We will then use this created `namespace` for all resources later on so everything you do is bundled there!
+
+=== Create a {ocpai} Project
 
 To access {ocpai}, simply click on the hamburger menu at the upper right hand corner which opens up a popup where you can simply click on {ocpai}:
 
 image::ocpai-access.png[Access OpenShift AI]
 
-PROJECT NAME: {user}
+This will open up another tab where you need to press the "Log in with OpenShift" button and login again using your credentials (`{user}` with `{password}`). After that, you should see the actual {ocpai} dashboard. Navigate to "Data Science Projects" from the nav bar on the left and create a new project from there:
 
-== {ocpai} Data Science Projects
-With data science project in `Red Hat OpenShift AI` you organize your work in projects and workbenches, create and collaborate on notebooks, train and deploy models, configure model servers, and implement pipelines.
+image::ocpai-project.png[OpenShift AI Project Creation]
 
+Make sure to name your project `{user}` so you will be able to distinguish it from the others. That's already it! To double check that it worked correctly and we also have a `namespace` to work with, head back to the {ocpc}, navigate to "Projects" (under "Home" in the Administrator view) and search for the `{user}` project. If you were not able to find it there, make sure you actually created a data science project in {ocpai}.
 
-=== Create a {ocpai} Data Science Project:
-
-* Log in to the `{ocp}` web console: {openshift_console_url}
-* Launch `{ocpai}` via the application launcher (nine-dots) \-> *`Red Hat OpenShift AI`*
-* Create a new Data Science project \-> *`Create data science project`*.
-+
-Please use your assigned user name as project name.
-
- ** Name: `{user}`
- ** Resource name: `windy journey`
- ** \-> *`Create`*.
-
-Creating a data science project in Red Hat OpenShift AI, create also a project and namespace in OpenShift.
-In the OpenShift web console, please select your project `{user}`.
+NOTE: Creating a data science project is actually "only" creating a `namespace` in the background. The reason you don`t see all `namespaces` as data science projects is because for a `namespace` to also be a data science project it needs a specific label: `opendatahub.io/dashboard: "true"`. You could add this label to an existing `namespace` and you would have another data science project!
 
 == MinIO
 
@@ -37,19 +26,11 @@ The model we want to train and use later on needs to reside somewhere. {ocpai} h
 
 === Install MinIO:
 
-. Create a `namespace` named `minio-{user}`. To do so, simply create a `project` (which will also create the `namespace`):
-+
-image::project-admin.png[Create a new project in OpenShift]
-+
-Only the name is required and relevant here, make sure to put in `minio-{user}`
-+
-image::project-modal.png[Create a new project in OpenShift]
-
-. Now we need to import the relevant YAML resources. Head to the Import YAML view (reminder: plus icon at the upper right hand corner). After creating the `project` it should automatically be the selected `project`, double check this in the Import YAML view:
+. We need to import the relevant YAML resources for the MinIO deployment. Head to the Import YAML view (reminder: plus icon at the upper right hand corner). Make sure you have your project selected currently, you can see it in the import YAML view:
 +
 image::minio-import-yaml.png[Create a new project in OpenShift]
 +
-*Instead of `minio-userx` it should be `minio-{user}`
+*Instead of `userxy` it should be `{user}`
 
 . In the Import YAML view, paste the following resources and click on `create`:
 +
@@ -246,4 +227,13 @@ NOTE: The login credentials for your MinIO instance can be seen in the `Secret`,
 
 === Create a bucket
 
-TODO: how to access minio ui and create bucket with screenshot
+In order to make use of the Object Storage capabilities of MinIO, we need to create a bucket. We will later upload our model into this bucket and be able to do the inferencing from there. Our MinIO deployment comes with two `Routes`, one for the API to consume the bucket and one for the Console (Web UI). Let's head over to the Console to create our bucket now!
+
+First we need to find out the URL to access the Console. To do so, head over to the "Network" tab in the Administrator view and then to "Routes". Now make sure your current project is {user}. This should show you the `Routes` which exist in this project, at this state the ones from MinIO. You can already see the "Location" property on the right site, just click on that!
+
+image::minio-route.png[MinIO Route and URL for the Web Console]
+
+There you need to login with the credentials used in the `Secret` when you applied all the YAML manifests for deploying MinIO in the first place. They were `minio` with `minio123`. After logging in, you will already be greeted with the bucket view which is recommending you to create your first bucket, so let's just do that!
+
+
+

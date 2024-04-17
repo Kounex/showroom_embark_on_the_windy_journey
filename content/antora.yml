@@ -8,6 +8,7 @@ nav:
 asciidoc:
   attributes:
     lab_name: Embark on the Windy Journey
+    global-name: wjvi
     ocp: OpenShift
     ocpai: OpenShift AI
     ocpc: OpenShift Console

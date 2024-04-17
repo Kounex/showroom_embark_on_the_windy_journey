@@ -21,7 +21,7 @@ Switch to the {ocpai} web console, navigate to `Data Science Project` and select
 
 * Create model server in your data science project
  ** Models and model servers \-> *`Add model server`*
- ** Server name: `+wj+`
+ ** Server name: `{global-name}`
  ** Serving runtime: `OpenVINO Model Server`
  ** Number of model server replicas to deploy: `1`
  ** Model server size: `Small`
@@ -29,11 +29,11 @@ Switch to the {ocpai} web console, navigate to `Data Science Project` and select
  ** Token authorization \-> `Uncheck/Disable` _'Require token authentication'_
  ** \-> *`Add`*
 * Deploy the trained model \-> *`Deploy Model`*
- ** Model Name: `+wy+`
+ ** Model Name: `{global-name}`
  ** Model framework: `onnx - 1`
  ** Model location: `Existing data connection`
- ** Name: `+wy+`
- ** Folder path: `+wy.onnx+`
+ ** Name: `{global-name}`
+ ** Folder path: `{global-name}.onnx`
  ** \-> *`Deploy`*
 * Wait until Status is green / loaded
  ** Copy and save the inference URL
@@ -46,4 +46,4 @@ Try out how an ML REST call could be integrated into your 'intelligent' Python a
 * Return to the workbench
 * Navigate to `windy-journey/ml/pytorch` and open `03_Visual_Inspection_YOLOv5_Infer_Rest.ipynb`
 * Explore and run cells step by step
- ** Please don´t forget to update the inferencing URL
+ ** Please don't forget to update the inferencing URL
