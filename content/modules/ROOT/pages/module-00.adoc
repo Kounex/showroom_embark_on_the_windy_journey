@@ -6,7 +6,7 @@ For those who are already familiar with {ocp}, feel free to skip this section as
 
 The easiest way to interact with an {ocp} cluster, is to make use of the {ocpc}, which is a web application granting you a visualization of the cluster and also enables you to interact with it. You are also able to use the Command Line Interface (CLI) to do so which will be explained later in this module.
 
-For now, open up your browser of choice and head over to {console_url}. There you will be greeted by the login page. Select "Local" and use the following credentials:
+For now, open up your browser of choice and head over to {console_url}. There you will be greeted by the login page. Use the following credentials:
 
 * {user}
 * {password}
@@ -19,7 +19,7 @@ Here you will find some high level / general purpose information of the state of
 
 image::dashboard-02.png[OpenShift Dashboard with hardware metrics]
 
-Since your provided user has admin privileges on the cluster, you are automatically on the "Administrator" view which can be seen on the top left corner, right under the {ocp} logo. There you can also toggle between the "Administrator" and "Developer" view which are, as the name indicates, targeted for different audiences / use cases. The Developer perspective provides workflows specific to developer use cases, such as the ability to:
+Since your provided user has admin privileges on the cluster, you are automatically on the *Administrator* view which can be seen on the top left corner, right under the {ocp} logo. There you can also toggle between the *Administrator* and *Developer* view which are, as the name indicates, targeted for different audiences / use cases. The Developer perspective provides workflows specific to developer use cases, such as the ability to:
 
 . Create and deploy applications in various ways directly from the UI
 . Visually interact with applications, components, and services associated with them within a project and monitor their deployment and build status.

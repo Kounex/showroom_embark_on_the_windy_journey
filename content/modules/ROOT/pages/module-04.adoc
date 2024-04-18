@@ -17,7 +17,7 @@ In case you have to not had the time or resources to train the model by yourself
 
 == Configure {ocpai} model serving
 
-Switch to the {ocpai} web console, navigate to `Data Science Project` and select your project `{user}`.
+Switch to the {ocpai} web console, navigate to *Data Science Project* and select your project `{user}`.
 
 * Create model server in your data science project
  ** Models and model servers \-> *`Add model server`*

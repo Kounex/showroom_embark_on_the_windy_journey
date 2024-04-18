@@ -12,17 +12,17 @@ To access {ocpai}, simply click on the hamburger menu at the upper right hand co
 
 image::ocpai-access.png[Access OpenShift AI]
 
-This will open up another tab where you need to press the "Log in with OpenShift" button and login again using your credentials (`{user}` with `{password}`). After that, you should see the actual {ocpai} dashboard. Navigate to "Data Science Projects" from the nav bar on the left and create a new project from there:
+This will open up another tab where you need to press the *Log in with OpenShift* button and login again using your credentials (`{user}` with `{password}`). After that, you should see the actual {ocpai} dashboard. Navigate to *Data Science Projects* from the nav bar on the left and create a new project from there:
 
 image::ocpai-project.png[OpenShift AI Project Creation]
 
-Make sure to name your project `{user}` so you will be able to distinguish it from the others. That's already it! To double check that it worked correctly and we also have a `namespace` to work with, head back to the {ocpc}, navigate to "Projects" (under "Home" in the Administrator view) and search for the `{user}` project. If you were not able to find it there, make sure you actually created a data science project in {ocpai}.
+Make sure to name your project `{user}` so you will be able to distinguish it from the others. That's already it! To double check that it worked correctly and we also have a `namespace` to work with, head back to the {ocpc}, navigate to *Projects* (under *Home* in the Administrator view) and search for the `{user}` project. If you were not able to find it there, make sure you actually created a data science project in {ocpai}.
 
 NOTE: Creating a data science project is actually "only" creating a `namespace` in the background. The reason you don`t see all `namespaces` as data science projects is because for a `namespace` to also be a data science project it needs a specific label: `opendatahub.io/dashboard: "true"`. You could add this label to an existing `namespace` and you would have another data science project!
 
 == MinIO
 
-The model we want to train and use later on needs to reside somewhere. {ocpai} has a feature which is called `Data Connection` where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of MinIO which enables us to create such buckets in our cluster.
+The model we want to train and use later on needs to reside somewhere. {ocpai} has a feature which is called *Data Connection* where we can reference storage used for serving our model later on. This storage needs to be an S3 bucket, therefore we will make use of MinIO which enables us to create such buckets in our cluster.
 
 === Install MinIO:
 
@@ -229,7 +229,7 @@ NOTE: The login credentials for your MinIO instance can be seen in the `Secret`,
 
 In order to make use of the Object Storage capabilities of MinIO, we need to create a bucket. We will later upload our model into this bucket and be able to do the inferencing from there. Our MinIO deployment comes with two `Routes`, one for the API to consume the bucket and one for the Console (Web UI). Let's head over to the Console to create our bucket now!
 
-First we need to find out the URL to access the Console. To do so, head over to the "Network" tab in the Administrator view and then to "Routes". Now make sure your current project is {user}. This should show you the `Routes` which exist in this project, at this state the ones from MinIO. You can already see the "Location" property on the right site, just click on that!
+First we need to find out the URL to access the Console. To do so, head over to the *Network* tab in the Administrator view and then to *Routes*. Now make sure your current project is {user}. This should show you the `Routes` which exist in this project, at this state the ones from MinIO. You can already see the *Location* property on the right site, just click on that!
 
 image::minio-route.png[MinIO Route and URL for the Web Console]
 
@@ -239,7 +239,7 @@ image::minio-create-bucket.png[Create a bucket in MinIO]
 
 Use `{global-name}` for the bucket name as this will be the name for almost all resources going forward to minimize potential mix-ups.
 
-The only thing left for us to configure for MinIO, is to set a region. Later on when creating a so called `Data Connection` in {ocpai}, we need to add a region, therefore we will set it in MinIO. To do so, we only need to head over to "Configuration" where we can set this under "Region", "Server Location":
+The only thing left for us to configure for MinIO, is to set a region. Later on when creating a so called *Data Connection* in {ocpai}, we need to add a region, therefore we will set it in MinIO. To do so, we only need to head over to *Configuration* where we can set this under *Region*, *Server Location*:
 
 image::minio-region-config.png[MinIO region setting]
 
