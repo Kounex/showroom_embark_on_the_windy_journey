@@ -25,7 +25,7 @@ image::dataconn.png[Add Data Conn]
 * AWS_ACCESS_KEY_ID: `minio`
 * AWS_SECRET_ACCESS_KEY: `minio123`
 * AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
-* AWS_DEFAULT_REGION: `us-east2` (it seems this cannot be empty)
+* AWS_DEFAULT_REGION: `us-east`
 * AWS_S3_BUCKET: `{global-name}` 
 +
 image::createdata.png[Create Connection]
