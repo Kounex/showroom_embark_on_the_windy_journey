@@ -12,8 +12,6 @@ asciidoc:
     ocp: OpenShift
     ocpai: OpenShift AI
     ocpc: OpenShift Console
-    ocp-login: admin
-    ocp-pw: admin
     release-version: master
     page-pagination: true
     guid: my-guid
