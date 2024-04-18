@@ -3,7 +3,7 @@
 While tools such as JupyterLab already offer intuitive ways for data scientists to develop models on their machines, there are always inherent complexities involved with collaboration and sharing work. Moreover, using specialized hardware such as powerful GPUs can be very expensive when you have to buy and maintain your own. The Jupyter environment that is included with OpenShift AI lets you take your development environment anywhere you need it to be. Because all of the workloads are run as containers, collaboration is as easy as sharing an image with your team members, or even simply adding it to the list of default containers that they can use. As a result, GPUs and large amounts of memory are significantly more accessible, since you are no longer limited by what your laptop can support.
 
 == Launch JupyterLab
-* Open your workbench that you cerated in the previous chapter.
+* Open your workbench that you created in the previous chapter.
 * Clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
 
 == Explore and run the model training notebook
