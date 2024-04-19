@@ -24,7 +24,7 @@ image::dataconn.png[Add Data Conn]
 * Name: `{global-name}`
 * AWS_ACCESS_KEY_ID: `minio`
 * AWS_SECRET_ACCESS_KEY: `minio123`
-* AWS_S3_ENDPOINT: `+http://minio.{user}.svc.cluster.local:9000+`
+* AWS_S3_ENDPOINT: `http://minio.{user}.svc.cluster.local:9000`
 * AWS_DEFAULT_REGION: `us-east`
 * AWS_S3_BUCKET: `{global-name}` 
 +
@@ -54,7 +54,7 @@ image::createworkbench.png[Create Workbench]
 +
 image::openjuypter.png[Create Workbench]
 +
-. Open the workbench and clone https://github.com/sa-mw-dach/windy-journey.git (there are at least 4 ways to do this - find out the approach you like)
+. Open the workbench and move on to the next section
 
 
 
