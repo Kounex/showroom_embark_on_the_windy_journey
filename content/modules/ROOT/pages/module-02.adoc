@@ -1,6 +1,6 @@
 = {ocpai} workbench 
 
-Switch to the {ocpai} web console, navigate to "Data Science Project" and select your project `{user}`. You can now see its initial state. There are five types of project components:
+Switch to the {ocpai} web console, navigate to *Data Science Project* and select your project `{user}`. You can now see its initial state. There are five types of project components:
 
 image::ocpaicomp.png[OCPAI components]
 
@@ -30,7 +30,7 @@ image::dataconn.png[Add Data Conn]
 +
 image::createdata.png[Create Connection]
 +
-. Once done, click on *Add Data Connection*
+. Once done, click on *Add data connection*
 
 == Create a workbench
 
