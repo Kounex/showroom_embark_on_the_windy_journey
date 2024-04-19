@@ -213,6 +213,9 @@ spec:
     weight: 100
   wildcardPolicy: None
 ----
++
+NOTE: You can see that none of the YAML resources above mention a `namespace` attribute. This is because this makes it more flexible so that the used `namespace` will be derived from the currently selected one. That's why it's important to create one before and make sure it's selected.
++
 .. Feel free to check the resources which are being generated. A small rundown on these:
 +
 ... `Deployment`: the main resource which will reference the used MinIO image and deploy it
@@ -220,8 +223,6 @@ spec:
 ... `PersistentVolumeClaim`: MinIO will enable us to create and expose S3 buckets, therefore object storage - that needs storage to begin with and this resource will attach storage to MinIO which it can then use
 ... `Secret`: contains the credentials for the root user of your MinIO instance
 ... `Route`: two of them, references the used `Service` to expose it and make it available outside the your cluster - in this case for the API and the Console (UI) of MinIO
-
-NOTE: You can see that none of the resources above mention a `namespace` attribute. This is because this makes it more flexible so that the used `namespace` will be derived from the currently selected one. That's why it's important to create one before and make sure it's selected.
 
 NOTE: The login credentials for your MinIO instance can be seen in the `Secret`, it's `minio` with `minio123`.
 
