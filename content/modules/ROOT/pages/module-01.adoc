@@ -230,7 +230,7 @@ NOTE: The login credentials for your MinIO instance can be seen in the `Secret`,
 
 In order to make use of the Object Storage capabilities of MinIO, we need to create a bucket. We will later upload our model into this bucket and be able to do the inferencing from there. Our MinIO deployment comes with two `Routes`, one for the API to consume the bucket and one for the Console (Web UI). Let's head over to the Console to create our bucket now!
 
-First we need to find out the URL to access the Console. To do so, head over to the *Network* tab in the Administrator view and then to *Routes*. Now make sure your current project is {user}. This should show you the `Routes` which exist in this project, at this state the ones from MinIO. You can already see the *Location* property on the right site, just click on that!
+First we need to find out the URL to access the Console. To do so, head over to the *Network* tab in the Administrator view and then to *Routes*. Now make sure your current project is `{user}`. This should show you the `Routes` which exist in this project, at this state the ones from MinIO. You can already see the *Location* property on the right site, just click on that!
 
 image::minio-route.png[MinIO Route and URL for the Web Console]
 
