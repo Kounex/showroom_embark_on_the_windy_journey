@@ -38,6 +38,7 @@ Switch to the {ocpai} web console, navigate to *Data Science Project* and select
 * Wait until Status is green / loaded
  ** Copy and save the inference URL
 
+NOTE: Please check that the inference endpoint URL does not contain any `undefined` string. The URL should look similar like `+https://wjvi-user2.apps.cluster-kn7m7.sandbox1697.opentlc.com/v2/models/wjvi/infer+`. In case your URL contains `undefined` string, please delete the model and re-deploy it with another name. E.g. `abc` instead of `wjvi`.   
 
 == Test inferencing with a REST API call
 

@@ -18,5 +18,5 @@ While tools such as JupyterLab already offer intuitive ways for data scientists 
 
 NOTE: Model training can take ~60 minutes or more even with GPUs. In this lab we don't have any GPU. Therefore, we only start the model training, but interrupt it and move on with a pre-trained model.
 
-NOTE: The notebook's cells contain output messages from a previous successful run. This is so you could stufy or show the notebook without actually run anything.
+NOTE: The notebook's cells contain output messages from a previous successful run. This is so you could study or show the notebook without actually run anything.
 
