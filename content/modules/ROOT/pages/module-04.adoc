@@ -24,7 +24,7 @@ Switch to the {ocpai} web console, navigate to *Data Science Project* and select
  ** Token authorization \-> `Uncheck/Disable` _'Require token authentication'_
  ** \-> *`Add`*
 * Deploy the trained model \-> *`Deploy Model`*
- ** Model Name: `{global-name}`
+ ** Model Name: `model`
  ** Model framework: `onnx - 1`
  ** Model location: `Existing data connection`
  ** Name: `{global-name}`
