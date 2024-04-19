@@ -15,7 +15,6 @@
 ** xref:module-03.adoc#_explore_and_run_the_model_training_notebook[Model training notebook]
 
 * xref:module-04.adoc[4. Configure and test Model Serving]
-** xref:module-04.adoc#_prerequisites[Prerequisites]
 ** xref:module-04.adoc#_download_a_pre_trained_model_and_upload_it_to_your_s3_bucket[Download pre-trained model]
 ** xref:module-04.adoc#_configure_openshift_ai_model_serving[Configure Model serving]
 ** xref:module-04.adoc#_test_inferencing_with_a_rest_api_call[Test inferencing API]

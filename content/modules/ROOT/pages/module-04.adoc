@@ -1,11 +1,6 @@
 = Model Serving
 
-== Prerequisites
-- Your workbench is configured and running.
-- You have a data connection
-- The git repo is cloned 
-For all steps see Module `{ocpai} workbench`
-
+Our main goal will be to make the model consumable so applications are able to do the inferencing via API.
 
 == Download a pre-trained model and upload it to your S3 bucket
 
