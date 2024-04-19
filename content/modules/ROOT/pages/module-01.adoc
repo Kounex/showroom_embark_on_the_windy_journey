@@ -240,7 +240,7 @@ image::minio-create-bucket.png[Create a bucket in MinIO]
 
 Use `{global-name}` for the bucket name as this will be the name for almost all resources going forward to minimize potential mix-ups.
 
-The only thing left for us to configure for MinIO, is to set a region. Later on when creating a so called *Data Connection* in {ocpai}, we need to add a region, therefore we will set it in MinIO. To do so, we only need to head over to *Configuration* where we can set this under *Region*, *Server Location*:
+The only thing left for us to configure for MinIO, is to set a region. Later on when creating a so called *Data Connection* in {ocpai}, we need to add a region, therefore we will set it in MinIO. To do so, we only need to head over to *Configuration* in the left navigation bar where we can set this under *Region*, *Server Location*:
 
 image::minio-region-config.png[MinIO region setting]
 
