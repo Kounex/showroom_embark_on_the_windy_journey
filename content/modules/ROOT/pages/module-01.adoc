@@ -30,7 +30,7 @@ The model we want to train and use later on needs to reside somewhere. {ocpai} h
 +
 image::minio-import-yaml.png[Create a new project in OpenShift]
 +
-*Instead of `userxy` it should be `{user}`
+NOTE: The project name should be `{user}` instead of `userxy` as seen in the image above
 
 . In the Import YAML view, paste the following resources and click on `create`:
 +

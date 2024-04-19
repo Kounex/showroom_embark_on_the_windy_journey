@@ -19,7 +19,7 @@ This repository serves as a mono repository containing source codes of applicati
 | File | Description
 
 | Prerequisites
-| The applications of this use case will use certain services we need to install on our OpenShift cluster. We will need services like Serverless, AMQ Streams (Kafka) and *{ocpai}*. This guide will explain how to install those.
+| The applications of this use case will use certain services we need to install on our OpenShift cluster.
 
 | Model Training
 | For this use case we want to train a model which will be capable of finding anomalies in wind turbine images. We will use the capabilities of {ocpai} to do so. This guide will explain how to use *{ocpai}* for our workshop.
