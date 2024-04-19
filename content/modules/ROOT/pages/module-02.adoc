@@ -21,12 +21,12 @@ image::dataconn.png[Add Data Conn]
 +
 . Fill out the *Add data connection* form with the following information. These data were already set earlier in xref:module-01.adoc[Prerequisites]
 
-* Name: `{global-name}`
-* AWS_ACCESS_KEY_ID: `minio`
-* AWS_SECRET_ACCESS_KEY: `minio123`
-* AWS_S3_ENDPOINT: `\http://minio.{user}.svc.cluster.local:9000`
-* AWS_DEFAULT_REGION: `us-east`
-* AWS_S3_BUCKET: `{global-name}` 
+* *Name*: `{global-name}`
+* *AWS_ACCESS_KEY_ID*: `minio`
+* *AWS_SECRET_ACCESS_KEY*: `minio123`
+* *AWS_S3_ENDPOINT*: `\http://minio.{user}.svc.cluster.local:9000`
+* *AWS_DEFAULT_REGION*: `us-east`
+* *AWS_S3_BUCKET*: `{global-name}` 
 +
 image::createdata.png[Create Connection]
 +
@@ -40,12 +40,12 @@ A *workbench* is an instance of your development and experimentation environment
 
 . Fill out the form with the following information:
 
-* Name: `{global-name}`
-* Image: `Windy Journey Lab Notebook` 
-* Deployment size: `Small`
-* Number of GPUs: 0
-* Cluster storage: `Create new cluster storage`
-* Data connection: `Use existing data connection` \-> `{global-name}`
+* *Name*: `{global-name}`
+* *Image selection*: `Windy Journey Lab Notebook` 
+* *Deployment size*: `Small`
+* *Cluster storage*: `Create new cluster storage`
+* *Persistent storage size*: `20 Gi`
+* *Data connections*: Check `Use a data connection`, scroll down and select `Use existing data connection` and select `{global-name}` in the dropdown
 +
 image::createworkbench.png[Create Workbench]
 +
